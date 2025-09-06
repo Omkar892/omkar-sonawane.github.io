@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omkar Sonawane · Portfolio</title>
+  <meta name="description"
+    content="Omkar Sonawane – Data Scientist. SQL, Python, Power BI, Excel, Data Visualization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+
+    .dot {
+      width: .5rem;
+      height: .5rem;
+    }
+
+    .fade-in {
+      animation: fade .6s ease-out both;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* WhatsApp floating button */
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      width: 70px;
+      /* Increased size */
+      height: 70px;
+      /* Increased size */
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      /* Larger icon */
+      box-shadow: 2px 2px 8px #555;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.2) rotate(-10deg);
+      /* Slight rotation on hover */
+      box-shadow: 4px 4px 12px #333;
+      /* Stronger shadow */
+      background-color: #1ebe57;
+      /* Slightly different green on hover */
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header -->
+  <header
+    class="sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/70 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="#home" class="font-extrabold tracking-tight text-lg hover:text-indigo-600 transition-colors">Omkar<span
+            class="text-indigo-600">.</span></a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#home"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">About</a>
+          <a href="#skills"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Skills</a>
+          <a href="#education"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Education</a>
+          <a href="#projects"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Projects</a>
+          <a href="#certifications"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Certifications</a>
+          <a href="#resume"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Resume</a>
+          <a href="#contact"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Theme & Mobile Menu Buttons -->
+        <div class="flex items-center gap-3">
+          <button id="themeBtn"
+            class="rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-xs hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">
+            Toggle Theme
+          </button>
+          <button id="menuBtn"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors"
+            aria-label="Open Menu">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+              <circle cx="12" cy="5" r="2" />
+              <circle cx="12" cy="12" r="2" />
+              <circle cx="12" cy="19" r="2" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Nav -->
+
+      <div id="mobileNav" class="md:hidden hidden pb-3 border-t border-slate-200/60 dark:border-slate-800/80">
+        <nav class="flex flex-col gap-2 pt-3 text-sm">
+          <a href="#home"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">About</a>
+          <a href="#skills"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Skills</a>
+          <a href="#education"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Education</a>
+          <a href="#projects"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Projects</a>
+          <a href="#certifications"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Certifications</a>
+          <a href="#resume"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Resume</a>
+          <a href="#contact"
+            class="px-3 py-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">Contact</a>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+
+<!-- Hero -->
+<section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+
+    <!-- Image: mobile first, desktop last -->
+    <div class="md:col-span-2 flex justify-center md:justify-end order-first md:order-last mb-6 md:mb-0">
+      <div class="relative w-48 h-48 md:w-full md:h-full md:aspect-square rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+        <img src="/portfolio/Gemini_Generated_Image_g8tzwng8tzwng8tz.png" alt="Omkar Sonawane"
+          class="w-full h-full object-cover rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg" />
+      </div>
+    </div>
+
+    <!-- Name + Intro + Buttons -->
+    <div class="md:col-span-3 text-center md:text-left order-last md:order-first">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Omkar Sonawane</h1>
+      <h2 class="text-2xl sm:text-3xl font-bold mt-2">About</h2>
+      <p class="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-300">
+        <strong>Data science · Gen AI · SQL · Python · Power BI · Excel · Data Visualization</strong>
+      </p>
+      <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+        I’m Omkar Sonawane, a data science enthusiast with strong skills in Python, SQL, Power BI,
+        and Excel. I enjoy turning data into clear insights and building dashboards that make
+        decision-making easier.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
+        <a href="https://www.linkedin.com/in/omkar892" target="_blank"
+          class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-indigo-500 text-sm sm:text-base">LinkedIn</a>
+        <a href="https://github.com/Omkar892" target="_blank"
+          class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-indigo-500 text-sm sm:text-base">GitHub</a>
+        <a href="#contact" class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 text-sm sm:text-base">Hire Me</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Education -->
+  <section id="education" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center">Education</h2>
+    <ol class="relative border-s border-slate-200 dark:border-slate-800 mt-6">
+      <li class="ms-6 py-5">
+        <span class="absolute -start-2 mt-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
+        <h3 class="font-semibold">MCA, Computer Science</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Dr. Vithalrao Vikhe Patil Foundation's Institute of
+          Business Management & Rural Development, Ahilyanagar</p>
+      </li>
+      <li class="ms-6 py-5">
+        <span class="absolute -start-2 mt-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
+        <h3 class="font-semibold">B.Sc., Computer Science</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Deogiri College, Chhatrapati Sambhajinagar (BAMU
+          University)</p>
+      </li>
+      <li class="ms-6 py-5">
+        <span class="absolute -start-2 mt-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
+        <h3 class="font-semibold">Data Science (Online)</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Pursuing focused coursework in Python, SQL, BI and ML
+          basics</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center">Skills</h2>
+
+    <!-- Filter Tabs -->
+    <div class="flex justify-center mt-6 gap-4">
+      <button onclick="showSkills('technical')" id="techBtn"
+        class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500">Technical Skills</button>
+      <button onclick="showSkills('soft')" id="softBtn"
+        class="px-4 py-2 rounded-xl border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-800">Soft
+        Skills</button>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-6" id="skillsGrid">
+
+      <!-- Example Technical Skills -->
+      <div class="skill-item" data-type="technical">
+        <div
+          class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center hover:scale-105 transition-transform">
+          <h3 class="font-semibold">Python</h3>
+        </div>
+      </div>
+      <div class="skill-item" data-type="technical">
+        <div
+          class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center hover:scale-105 transition-transform">
+          <h3 class="font-semibold">SQL</h3>
+        </div>
+      </div>
+      <div class="skill-item" data-type="technical">
+        <div
+          class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center hover:scale-105 transition-transform">
+          <h3 class="font-semibold">Power BI</h3>
+        </div>
+      </div>
+
+      <!-- Example Soft Skills -->
+      <div class="skill-item hidden" data-type="soft">
+        <div
+          class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center hover:scale-105 transition-transform">
+          <h3 class="font-semibold">Communication</h3>
+        </div>
+      </div>
+      <div class="skill-item hidden" data-type="soft">
+        <div
+          class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center hover:scale-105 transition-transform">
+          <h3 class="font-semibold">Teamwork</h3>
+        </div>
+      </div>
+      <div class="skill-item hidden" data-type="soft">
+        <div
+          class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center hover:scale-105 transition-transform">
+          <h3 class="font-semibold">Problem Solving</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center">Projects</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Netflix Analysis</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Data cleaning, EDA, visualizations, and insights
+          using Python and Pandas.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/Omkar892/Netflix_Analysis" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Excel Dashboard</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Interactive dashboard creation with pivot tables,
+          charts, and data cleaning in Excel.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/Omkar892/Excel-Dashboard" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Super Store Analysis</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Visualization, logistic regression model, and
+          evaluation in Jupyter Notebook.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/Omkar892/Super_Store_analysis" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center">Certifications</h2>
+    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Certificate Card -->
+      <div
+        class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900 hover:scale-105 transition-transform">
+        <h3 class="font-semibold text-lg">Python Basic</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+          Completed the Python Basic course on HackerRank.
+        </p>
+        <a href="https://www.hackerrank.com/certificates/19677d587582" target="_blank"
+          class="mt-3 inline-block underline text-indigo-600 hover:text-indigo-500">View Certificate</a>
+      </div>
+
+      <div
+        class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900 hover:scale-105 transition-transform">
+        <h3 class="font-semibold text-lg">SQL Basic</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+          Completed the SQL Basic course on HackerRank.
+        </p>
+        <a href="https://www.hackerrank.com/certificates/67187ce7dbce" target="_blank"
+          class="mt-3 inline-block underline text-indigo-600 hover:text-indigo-500">View Certificate</a>
+      </div>
+
+      <div
+        class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900 hover:scale-105 transition-transform">
+        <h3 class="font-semibold text-lg">SQL Intermediate</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+          Completed the SQL Intermediate course on HackerRank.
+        </p>
+        <a href="https://www.hackerrank.com/certificates/iframe/0138f3c120b0" target="_blank"
+          class="mt-3 inline-block underline text-indigo-600 hover:text-indigo-500">View Certificate</a>
+      </div>
+
+      <div
+        class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900 hover:scale-105 transition-transform">
+        <h3 class="font-semibold text-lg">SQL Advanced</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+          Completed the SQL Advanced course on HackerRank.
+        </p>
+        <a href="https://www.hackerrank.com/certificates/iframe/8bedb7652114" target="_blank"
+          class="mt-3 inline-block underline text-indigo-600 hover:text-indigo-500">View Certificate</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center">Contact</h2>
+    <p class="mt-2 text-center text-slate-600 dark:text-slate-400">
+      Feel free to reach out to me for collaborations, opportunities, or just a quick hello.
+    </p>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-8">
+      <!-- Contact Info -->
+      <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900">
+        <h3 class="font-semibold text-lg">Get in Touch</h3>
+        <ul class="mt-4 space-y-3 text-base text-slate-700 dark:text-slate-300">
+          <li><strong>Email:</strong>
+            <a class="underline" href="mailto:omkarsonawane892@gmail.com">omkarsonawane892@gmail.com</a>
+          </li>
+          <li><strong>Phone:</strong>
+            <a class="underline" href="tel:+919075652229">+91 9075652229</a>
+          </li>
+          <li><strong>Location:</strong> Chhatrapati Sambhajinagar, Maharashtra, India - 431136</li>
+        </ul>
+      </div>
+
+
+      <!-- Contact Form -->
+      <div
+        class="md:col-span-2 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900">
+        <h3 class="font-semibold text-lg">Quick Message</h3>
+        <form onsubmit="mailtoSubmit(event)" class="mt-4 space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input required name="name" placeholder="Your name"
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent" />
+            <input required name="email" type="email" placeholder="Your email"
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent" />
+          </div>
+          <textarea required name="msg" rows="4" placeholder="Your message"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent"></textarea>
+          <button class="px-6 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-10 bg-white dark:bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <!-- Left side: Copyright -->
+      <p class="text-2xl dark:text-slate-400">&copy; <span id="year"></span> </p>
+
+      <!-- Center: Quick links -->
+      <div class="flex gap-6">
+        <a href="#home" class="text-1xl dark:text-slate-300 hover:text-indigo-600 transition">Home</a>
+        <a href="#about" class="text-1xl text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition">About</a>
+        <a href="#projects"
+          class="text-1xl text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition">Projects</a>
+        <a href="#contact"
+          class="text-1xl text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition">Contact</a>
+      </div>
+
+      <!-- Right side: Social icons -->
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/omkar892" target="_blank"
+          class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.6v2.16h.05c.5-.95 1.72-1.95 3.54-1.95 3.78 0 4.48 2.48 4.48 5.7V24h-4v-7.96c0-1.9-.03-4.36-2.66-4.36-2.66 0-3.06 2.07-3.06 4.2V24h-4V8z" />
+          </svg>
+        </a>
+        <a href="https://github.com/Omkar892" target="_blank"
+          class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.44 7.88 10.98.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.52-1.33-1.28-1.68-1.28-1.68-1.04-.7.08-.68.08-.68 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.23 3.34.94.1-.74.4-1.23.72-1.51-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.12-.12-.29-.52-1.45.11-3.02 0 0 .96-.3 3.15 1.18a10.98 10.98 0 0 1 5.73 0c2.19-1.48 3.15-1.18 3.15-1.18.63 1.57.23 2.73.11 3.02.73.82 1.18 1.86 1.18 3.12 0 4.43-2.69 5.41-5.25 5.69.41.36.77 1.08.77 2.18v3.24c0 .31.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919075652229" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 25 25" width="50" height="50">
+      <path
+        d="M20.52 3.48A11.77 11.77 0 0 0 12 .23C5.57.23.27 5.53.27 12c0 2.1.55 4.16 1.61 5.97L0 24l6.21-1.62A11.74 11.74 0 0 0 12 23.77c6.47 0 11.77-5.3 11.77-11.77 0-3.14-1.22-6.09-3.45-8.32Zm-8.52 17.2c-1.86 0-3.67-.5-5.25-1.44l-.38-.22-3.68.96.98-3.59-.25-.37A9.46 9.46 0 0 1 2.5 12c0-5.23 4.26-9.48 9.5-9.48 2.54 0 4.92.99 6.71 2.77a9.46 9.46 0 0 1 2.79 6.71c0 5.22-4.26 9.48-9.5 9.48Zm5.24-7.12c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.28-.74.92-.91 1.11-.17.19-.34.21-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.28-.02-.43.13-.57.13-.13.29-.34.43-.51.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.51-.07-.15-.64-1.55-.88-2.13-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.28-1 1-1 2.44 0 1.44 1.03 2.84 1.17 3.04.15.19 2.03 3.1 4.9 4.35.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.11.55-.08 1.7-.69 1.94-1.35.24-.66.24-1.23.17-1.35-.07-.13-.26-.2-.55-.35Z" />
+    </svg>
+  </a>
+
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+    (function () { const saved = localStorage.getItem('theme'); if (saved === 'dark') document.documentElement.classList.add('dark'); })();
+
+    //
+    function showSkills(type) {
+      const items = document.querySelectorAll('.skill-item');
+      items.forEach(item => {
+        if (item.dataset.type === type) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      // Update tab button styles
+      document.getElementById('techBtn').classList.toggle('bg-indigo-600', type === 'technical');
+      document.getElementById('techBtn').classList.toggle('text-white', type === 'technical');
+      document.getElementById('techBtn').classList.toggle('border', type !== 'technical');
+      document.getElementById('softBtn').classList.toggle('bg-indigo-600', type === 'soft');
+      document.getElementById('softBtn').classList.toggle('text-white', type === 'soft');
+      document.getElementById('softBtn').classList.toggle('border', type !== 'soft');
+    }
+
+    // Default: show technical skills
+    showSkills('technical');
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Contact form mailto
+    function mailtoSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const msg = encodeURIComponent(form.msg.value.trim());
+      const subject = encodeURIComponent(`Portfolio message from ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${form.msg.value.trim()}`);
+      window.location
+    }
+    // Contact form mailto
+    function mailtoSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const msg = encodeURIComponent(form.msg.value.trim());
+      const subject = encodeURIComponent(`Portfolio message from ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${form.msg.value.trim()}`);
+      window.location.href = `mailto:omkarsonawane892@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // Year auto update
+    document.getElementById('year').textContent = new Date().toLocaleDateString('en-IN', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric'
+    });
+
+
+
+  </script>
+</body>
+
+</html>
